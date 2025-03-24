@@ -170,3 +170,10 @@ body, html{
   .createAccountHeading{
     margin-top: 33vmax;
   }
+
+
+  .customToast{
+    background-color: #800080c5 !important;
+    color: white !important;
+    font-family: "Poppins", sans-serif !important;
+}
