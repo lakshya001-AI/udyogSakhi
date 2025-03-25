@@ -14,9 +14,9 @@ function MainPage() {
           <div className={Style.navBarDiv}>
             <p>UdyogSakhi</p>
             <div className={Style.navBarElement}>
-              <a href="">Home</a>
-              <a href="">Features</a>
-              <a href="">About Us</a>
+              <Link to="/MainPage">Home</Link>
+              <a href="#features">Features</a>
+              <a href="#AboutUs">About Us</a>
             </div>
             <div className={Style.navBarBtn}>
               <Link>My Profile</Link>
@@ -24,7 +24,7 @@ function MainPage() {
           </div>
 
           {/* First Div */}
-          <div className={Style.mainPageFirstDiv}>
+          <div className={Style.mainPageFirstDiv} >
             {/* Content Section */}
             <div className={Style.contentSection}>
               <p className={Style.contentSectionPara1}>
@@ -98,7 +98,7 @@ function MainPage() {
           </div>
 
           {/* Second Div */}
-          <div className={Style.mainPageFirstDiv}>
+          <div className={Style.mainPageFirstDiv} id="AboutUs">
             {/* Design Section */}
             <div className={Style.designSectionSecondDiv}>
               <img
@@ -133,7 +133,7 @@ function MainPage() {
           </div>
 
           {/* Third Div */}
-          <div className={Style.mainPageThirdDiv}>
+          <div className={Style.mainPageThirdDiv} id="features">
 
             <div className={Style.mainPageThirdDivHeadings}>
               <p className={Style.contentSectionPara1}>
