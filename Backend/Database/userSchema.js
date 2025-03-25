@@ -35,6 +35,9 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    creditScore: {
+        type: String,
+    },
     governmentId: {
         type: String,
         required: true,

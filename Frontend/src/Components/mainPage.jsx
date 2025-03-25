@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Style from "../App.module.css";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function MainPage() {
+
+  const navigate = useNavigate();
+
+  function gotoDonations(){
+    navigate("/donationPage");
+  }
+
+
   return (
     <>
       <div className={Style.mainPage}>
@@ -20,7 +28,7 @@ function MainPage() {
               <Link>MarketPlace</Link>
             </div>
             <div className={Style.navBarBtn}>
-              <Link>My Profile</Link>
+              <Link to="/ProfilePage">My Profile</Link>
             </div>
           </div>
 
@@ -122,10 +130,10 @@ function MainPage() {
               </p>
 
               <p className={Style.contentSectionPara3}>
-                <i class="fa-solid fa-handshake-angle"></i> Start Helping Team
+                <i class="fa-solid fa-handshake-angle"></i> Join Us in Raising Funds to Make an Impact
               </p>
               <div className={Style.joinUsNowBtn}>
-                <button>
+                <button onClick={gotoDonations}>
                   Donate Now{" "}
                   <i class="fa-solid fa-circle-arrow-right fa-xl"></i>
                 </button>
