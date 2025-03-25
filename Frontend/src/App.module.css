@@ -177,3 +177,117 @@ body, html{
     color: white !important;
     font-family: "Poppins", sans-serif !important;
 }
+
+.websiteMainPage{
+  width: 100%;
+  height: 100%;
+}
+
+.navBarDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navBarDiv p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #800080;
+}
+
+.navBarElement {
+  display: flex;
+  gap: 20px;
+}
+
+.navBarElement a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #525252;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navBarElement a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #800080;
+  transition: width 0.3s;
+}
+
+.navBarElement a:hover {
+  color: #800080;
+}
+
+.navBarElement a:hover::after {
+  width: 100%;
+}
+
+.navBarBtn {
+  display: flex;
+  gap: 10px;
+}
+
+.navBarBtn a {
+  padding: 8px 40px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  background-color: #800080;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.navBarBtn a:hover {
+  background-color: #800080c5;
+  transform: scale(1.05);
+}
+
+
+.mainPageFirstDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.contentSection {
+  flex: 1;
+  color: white;
+  text-align: left;
+}
+
+.contentSection h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contentSection p {
+  font-size: 1.2rem;
+}
+
+.designSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.profile {
+  width: 100px;
+  height: 150px;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+

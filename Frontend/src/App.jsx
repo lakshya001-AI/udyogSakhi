@@ -3,6 +3,7 @@ import Style from "./App.module.css"
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import LoginPage from './Components/loginPage';
 import CreateAccountPage from './Components/createAccountPage';
+import MainPage from './Components/mainPage';
 
 function App() {
   return <>
@@ -10,6 +11,7 @@ function App() {
   <Routes>
     <Route path='/' element={<LoginPage/>}/>
     <Route path='/createAccountPage' element={<CreateAccountPage/>}/>
+    <Route path='/MainPage' element={<MainPage/>}/>
   </Routes>
   </BrowserRouter>
 
