@@ -1,2 +1,56 @@
 1. First feature Flow:
 
+-> CrowdFunding -> if the amount is small and neha wants it on the urgent basis
+-> CrowFunding + Bank loan -> if the amount is some what large and neha wants it on the urgent basis
+-> Total CrowdFunding -> if the amount is large , but neha has some time
+-> Total loan -> if the amount is very large , but neha wants it on the very urgent basis
+
+-> If the neha selects for the Crowdfunding then we are going to ask neha whether she want to give some perks to the donors , for donating particular amount.
+
+*** Donor giving donations -> 5000 -> get perks from neha ***
+
+-> For this we need to create another section on our platform where we will show all the donations , where people will be able to donate
+
+*** Donate to any individual entrepreneur <- Donation -> Donate in Crowdfunding ***
+
+-> Also give an option of sending request to the NGO/Angle Investors/corporate social responsibility (CSR) funds , to get some help
+
+-> want help button , this button will help the neha to seek advice from the udyogSakhi team
+
+--------------------------------------------------------------------------------------------------------
+
+2. Second Feature Flow:
+
+-> Here we are going to take the data from the neha -> ML model is going to analyze the data -> Gives the response
+-> Type of response -> Excellent(81-100) , Good(61-80), Average(41-60),Poor(0-40)
+-> Explain the reason , like Your credit score is 85 (Excellent) because of consistent sales, positive customer reviews, and high profit margins.
+-> Show her the loan options available -> if the credit score is Good
+-> Show her the option to increase her credit score like -> mentoring -> Attend financial literacy program -> Post the product on th mart.
+
+-----------------------------------------------------------------------------------------------------------
+
+3. Third Feature Flow:
+
+-> Modules
+-> Campaign and gatherings
+-> Provide a feature where she can connect with mentor and ask for help
+-> Provide a feature where she can also connect or contact with other women entrepreneurs.
+
+------------------------------------------------------------------------------------------------------------
+
+
+4. Fourth Feature Flow:
+
+In the fourth feature we are going to create a mart where this women's those who have some products can upload there products and it will behave like an e-commerce. And if any one is going to buy something it will eventually increase the credit core of the women entrepreneur.
+
+
+
+
+
+
+
+
+
+
+
+
