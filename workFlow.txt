@@ -44,6 +44,16 @@
 In the fourth feature we are going to create a mart where this women's those who have some products can upload there products and it will behave like an e-commerce. And if any one is going to buy something it will eventually increase the credit core of the women entrepreneur. In feature we will integrate it with the flipkart and amazon product research unit so that they can analyze the product that are present on our platform and can publish them on there on platform.
 
 
+-------------------------------------------------------------------------------
+
+1. Donate Now
+2. Profile
+3. First feature
+4. Second feature
+5. third feature
+6. marketplace
+
+
 
 
 

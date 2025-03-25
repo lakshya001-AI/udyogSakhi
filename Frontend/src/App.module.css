@@ -330,13 +330,13 @@ overflow-x: hidden;
 }
 
 .joinUsNowBtn button:hover {
-  background-color: #9a009a; /* Slightly lighter purple */
-  transform: scale(1.05); /* Slight zoom effect */
+  background-color: transparent; /* Slightly lighter purple */
+  color: #5e005e;
+  border: solid 1px #800080;
   box-shadow: 0px 6px 12px rgba(128, 0, 128, 0.5); /* Stronger shadow */
 }
 
 .joinUsNowBtn button:active {
-  transform: scale(0.95); /* Slight shrink effect when clicked */
   box-shadow: 0px 2px 6px rgba(128, 0, 128, 0.2); /* Subtle shadow */
 }
 
@@ -504,7 +504,7 @@ overflow-x: hidden;
 
 .featuresSection p {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: center;
   margin-bottom: 20px;
   color: #eaeaea;
@@ -531,5 +531,71 @@ overflow-x: hidden;
 
 .mainPageFourthDiv{
   width: 100%;
-  height: 40vh;
+  height: 90vh;
+  margin-top: 27vmax;
+  display: flex;
+  flex-direction: row ;
+  padding: 0px 50px;
+}
+
+
+.contentSectionFourthDiv{
+  width: 50%;
+  height: 100%;
+}
+
+.designSectionFourthDiv{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.designSectionFourthDiv img{
+  width: 40vw;
+  margin-top: 100px;
+  height: 50vh;
+  margin-left: 50px;
+}
+
+.contentSectionHeadingFourthDiv{
+  color: #333;
+  font-size: 3.6rem;
+}
+
+
+.joinUsNowBtnMarketPlace {
+  margin-top: 25px;
+  display: flex;
+}
+
+.joinUsNowBtnMarketPlace button {
+  width: 300px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #800080;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Adds space between text and icon */
+  box-shadow: 0px 4px 8px rgba(128, 0, 128, 0.3); /* Subtle shadow */
+  margin-right: 10px;
+}
+
+.joinUsNowBtnMarketPlace button:hover {
+  background-color: transparent; /* Slightly lighter purple */
+  color: #5e005e;
+  border: solid 1px #800080;
+  box-shadow: 0px 6px 12px rgba(128, 0, 128, 0.5); /* Stronger shadow */
+}
+
+.joinUsNowBtnMarketPlace button:active {
+  box-shadow: 0px 2px 6px rgba(128, 0, 128, 0.2); /* Subtle shadow */
 }

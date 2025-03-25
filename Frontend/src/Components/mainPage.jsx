@@ -17,6 +17,7 @@ function MainPage() {
               <Link to="/MainPage">Home</Link>
               <a href="#features">Features</a>
               <a href="#AboutUs">About Us</a>
+              <Link>MarketPlace</Link>
             </div>
             <div className={Style.navBarBtn}>
               <Link>My Profile</Link>
@@ -117,7 +118,7 @@ function MainPage() {
               </h1>
               <p className={Style.contentSectionPara2}>
                 Our goal is to uplift and empower women, helping them achieve
-                their dreams and build a brighter future."
+                their dreams and build a brighter future.
               </p>
 
               <p className={Style.contentSectionPara3}>
@@ -187,11 +188,42 @@ function MainPage() {
           </div>
 
 
-          {/* Fourth Div */}
+         {/* Fourth Div */}
+         <div className={Style.mainPageFourthDiv} id="AboutUs">
+            {/* Content Section */}
+            <div className={Style.contentSectionFourthDiv}>
+              <p className={Style.contentSectionPara1}>
+                <i class="fa-solid fa-heart"></i> MarketPlace
+              </p>
+              <h1 className={Style.contentSectionHeadingFourthDiv}>
+              Building a Marketplace for Growth and Opportunity.
+              </h1>
+              <p className={Style.contentSectionPara2}>
+              Our mission is to empower women entrepreneurs by providing a thriving marketplace that fuels their success, drives profits, and fosters sustainable growth.
+              </p>
 
-          <div className={Style.mainPageFourthDiv}>
-
-
+              <p className={Style.contentSectionPara3}>
+                <i class="fa-solid fa-handshake-angle"></i> Explore MarketPlace Now
+              </p>
+              <div className={Style.joinUsNowBtnMarketPlace}>
+                <button>
+                Discover the Marketplace{" "}
+                  <i class="fa-solid fa-circle-arrow-right fa-xl"></i>
+                </button>
+                <button>
+                Showcase Your Product{" "}
+                  <i class="fa-solid fa-circle-arrow-right fa-xl"></i>
+                </button>
+                
+              </div>
+            </div>
+            {/* Design Section */}
+            <div className={Style.designSectionFourthDiv}>
+              <img
+                src="\Assets\Brown Simple Grid Nature Photo Collage1.png"
+                alt=""
+              />
+            </div>
           </div>
 
           
