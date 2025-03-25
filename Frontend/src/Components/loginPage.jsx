@@ -21,6 +21,9 @@ function LoginPage() {
         });
 
         if (response.status === 200) {
+
+          const {token} = response.data;
+
           toast.success(response.data.message, {
             position: "top-right",
             autoClose: 5000,
@@ -36,6 +39,9 @@ function LoginPage() {
 
           // Storing the user object in localStorage
           localStorage.setItem("User", JSON.stringify(response.data.user));
+
+          // Storing token in local storage
+          localStorage.setItem("authToken", token);
 
           // Retrieving the user object from localStorage
           let getUser = JSON.parse(localStorage.getItem("User"));

@@ -4,8 +4,12 @@ const connectMongoDB = require("./Database/connectDB");
 const userModel = require("./Database/userSchema");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
+const dotenv = require("dotenv");
+const path = require("path");
+const jwt = require("jsonwebtoken");
 const app = express();
 
+dotenv.config();
 connectMongoDB();
 
 
@@ -14,6 +18,12 @@ connectMongoDB();
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "client/build")));
+
+
+const JWT_SECRET = process.env.JWT_SECRET || "mySuperSecretKey12345!@";
+
+
 
 app.get("/", (req, res)=>{
     res.send("Hello this is udyogSakhi Backend running on Port 5000");
@@ -79,7 +89,9 @@ app.post("/loginUser", async (req, res) => {
             return res.status(401).json({ message: "Invalid credentials" });
         }
 
-        return res.status(200).json({ message: "Login successful", user });
+        const token = jwt.sign({id: user._id, email:user.email},JWT_SECRET,{expiresIn: "1h"});
+
+        return res.status(200).json({ message: "Login successful", token, user });
     } catch (error) {
         console.error("Error during login:", error);
         return res.status(500).json({ message: "Server error. Please try again later." });
@@ -89,7 +101,7 @@ app.post("/loginUser", async (req, res) => {
 
 
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
 });
