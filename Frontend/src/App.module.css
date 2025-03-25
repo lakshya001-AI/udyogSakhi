@@ -12,6 +12,25 @@ body, html{
 }
 
 
+::-webkit-scrollbar {
+  width: 7px; /* Adjust width for vertical scrollbar */
+  height: 8px; /* Adjust height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #800080c5;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #800080;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+
 .mainPage{
     width: 100vw;
     height: 100vh;
@@ -181,6 +200,7 @@ body, html{
 .websiteMainPage{
   width: 100%;
   height: 100%;
+overflow-x: hidden;
 }
 
 .navBarDiv {
@@ -248,29 +268,83 @@ body, html{
 
 
 .mainPageFirstDiv {
+  width: 100%;
+  height: 90vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
   padding: 2rem;
 }
 
 .contentSection {
-  flex: 1;
+  width: 60%;
+  height: 100%;
+  padding: 20px 30px;
+}
+
+.contentSectionPara1{
+  margin-top: 70px;
+  color: #800080;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.contentSectionHeading{
+  font-size: 5rem;
+  word-spacing: 2px;
+  line-height:80px;
+  margin-top:15px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contentSectionPara2{
+  width: 90%;
+  margin-left: 5px;
+  font-size: 18px;
+  color: #525252;
+}
+
+.joinUsNowBtn {
+  margin-left: 5px;
+  margin-top: 25px;
+}
+
+.joinUsNowBtn button {
+  width: 200px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
   color: white;
-  text-align: left;
+  background-color: #800080;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Adds space between text and icon */
+  box-shadow: 0px 4px 8px rgba(128, 0, 128, 0.3); /* Subtle shadow */
 }
 
-.contentSection h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.joinUsNowBtn button:hover {
+  background-color: #9a009a; /* Slightly lighter purple */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0px 6px 12px rgba(128, 0, 128, 0.5); /* Stronger shadow */
 }
 
-.contentSection p {
-  font-size: 1.2rem;
+.joinUsNowBtn button:active {
+  transform: scale(0.95); /* Slight shrink effect when clicked */
+  box-shadow: 0px 2px 6px rgba(128, 0, 128, 0.2); /* Subtle shadow */
 }
+
+
 
 .designSection {
-  flex: 1;
+  width: 40%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,14 +354,182 @@ body, html{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  align-items: center;
 }
 
 .profile {
-  width: 100px;
-  height: 150px;
+  width: 160px;
+  height: 250px;
   border-radius: 50px;
   background-size: cover;
   background-position: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.profile:nth-child(2) {
+  transform: translateY(-60px); /* Moves the middle profile upwards */
+}
+
+.profile:nth-child(5) {
+  transform: translateY(-60px); /* Moves the middle profile upwards */
+}
+
+
+.designSectionSecondDiv{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.designSectionSecondDiv img{
+  width: 70%;
+  height: 80%;
+}
+
+.contentSectionSecondDiv{
+  width: 50%;
+  height: 100%;
+}
+
+.contentSectionHeadingSecondDiv{
+  font-size: 4.2rem;
+  word-spacing: 2px;
+  line-height:80px;
+  margin-top:15px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contentSectionPara3{
+  margin-top: 20px;
+  color: #800080;
+  font-size: 19px;
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.contentSectionPara4{
+  color: #800080;
+  font-size: 15px;
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+
+.mainPageThirdDivHeadings{
+  width: 100%;
+  padding: 20px 30px;
+}
+
+
+.contentSectionHeadingThirdDiv{
+  font-size: 3rem;
+  word-spacing: 2px;
+  line-height:80px;
+  margin-top:-10px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.mainPageThirdDiv{
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; 
+  padding: 2rem;
+}
+
+
+.featuresSection {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.featuresSection .featureDiv {
+  position: relative;
+  width: 30%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featuresSection .featureDiv:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.featuresSection .featureDiv:nth-child(1) {
+  background-image: url('https://media.gettyimages.com/id/1493090824/photo/confident-manager-standing-against-coworkers-in-factory.jpg?s=612x612&w=0&k=20&c=yV5DPe0xR7tcfgIFn-dOtQQxez0-Ja2aAXMd2eC3HFI=');
+}
+
+.featuresSection .featureDiv:nth-child(2) {
+  background-image: url('https://media.gettyimages.com/id/1279927411/photo/indian-woman-with-arms-crossed-at-textile-factory.jpg?s=612x612&w=0&k=20&c=pz-lcusEHXnXCVMbyHHYHmGjx_w4w5x4K1_n4GwZb24=');
+}
+
+.featuresSection .featureDiv:nth-child(3) {
+  background-image: url('https://media.gettyimages.com/id/1491552170/photo/confident-female-coworkers-standing-together-in-factory.jpg?s=612x612&w=0&k=20&c=YikN3dVlUsoISZlL0yLDH1p1H2X6YlH--CrCDiHMVno=');
+}
+
+.featuresSection .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 0, 128, 0.6); /* Purple overlay with opacity */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 10px 30px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.featuresSection h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.featuresSection p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #eaeaea;
+}
+
+.featuresSection .featureButton {
+  padding: 10px 40px;
+  border: none;
+  border-radius: 40px;
+  background-color: #fff; /* White button for better contrast */
+  color: #800080;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.featuresSection .featureButton:hover {
+  background-color: #5e005e; /* Darker purple for hover */
+  transform: scale(1.05);
+  color: white;
+}
+
+
+.mainPageFourthDiv{
+  width: 100%;
+  height: 40vh;
+}

@@ -1,50 +1,204 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import axios from "axios";
-import Style from '../App.module.css';
-import { Link } from 'react-router-dom';
+import Style from "../App.module.css";
+import { Link } from "react-router-dom";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function MainPage() {
-  return <>
-  <div className={Style.mainPage}>
-    <div className={Style.websiteMainPage}>
-            {/*  navbar*/}
-            <div className={Style.navBarDiv}>
-                <p>UdyogSakhi</p>
-                <div className={Style.navBarElement}>
-                    <a href="">Home</a>
-                    <a href="">Features</a>
-                    <a href="">About Us</a>
-                </div>
-                <div className={Style.navBarBtn}>
-                    <Link>My Profile</Link>
-                </div>
+  return (
+    <>
+      <div className={Style.mainPage}>
+        <div className={Style.websiteMainPage}>
+          {/*  navbar*/}
+          <div className={Style.navBarDiv}>
+            <p>UdyogSakhi</p>
+            <div className={Style.navBarElement}>
+              <a href="">Home</a>
+              <a href="">Features</a>
+              <a href="">About Us</a>
+            </div>
+            <div className={Style.navBarBtn}>
+              <Link>My Profile</Link>
+            </div>
+          </div>
+
+          {/* First Div */}
+          <div className={Style.mainPageFirstDiv}>
+            {/* Content Section */}
+            <div className={Style.contentSection}>
+              <p className={Style.contentSectionPara1}>
+                <i class="fa-solid fa-heart"></i> Empower Your Dreams with
+                UdyogSakhi
+              </p>
+              <h1 className={Style.contentSectionHeading}>
+                For the Women and Dreams That Inspire Us All.
+              </h1>
+              <p className={Style.contentSectionPara2}>
+                Join hands with UdyogSakhi, a platform dedicated to empowering
+                women entrepreneurs. Together, we can turn your dreams into
+                reality by providing access to innovative financial solutions,
+                AI-driven support, and tailored mentorship programs.
+              </p>
+              <div className={Style.joinUsNowBtn}>
+                <button>
+                  Join With Us{" "}
+                  <i class="fa-solid fa-circle-arrow-right fa-xl"></i>
+                </button>
+              </div>
             </div>
 
-            {/* First Div */}
-            <div className={Style.mainPageFirstDiv}>
-  {/* Content Section */}
-  <div className={Style.contentSection}>
-    <h1>Empower Your Business</h1>
-    <p>Join hands with UdyogSakhi to achieve your dreams.</p>
+            {/* Design Section */}
+            <div className={Style.designSection}>
+              <div className={Style.profileContainer}>
+                <div
+                  className={Style.profile}
+                  style={{
+                    backgroundImage:
+                      "url('https://hihindia.org/wp-content/uploads/2020/05/SELVI-1-scaled.jpg')",
+                  }}
+                ></div>
+                <div
+                  className={Style.profile}
+                  style={{
+                    backgroundImage:
+                      "url('https://images.yourstory.com/cs/4/8e7cc4102d6c11e9aa979329348d4c3e/shutterstock1929551069-1664529971155.jpg?fm=png&auto=format&w=800&blur=500')",
+                  }}
+                ></div>
+                <div
+                  className={Style.profile}
+                  style={{
+                    backgroundImage:
+                      "url('https://idronline.org/wp-content/uploads/2021/01/Roopali-feature-image_resize.jpg')",
+                  }}
+                ></div>
+                <div
+                  className={Style.profile}
+                  style={{
+                    backgroundImage:
+                      "url('https://www.nasscomfoundation.org/blog/wp-content/uploads/2024/09/Rural-Women-Entrepreneurs.webp')",
+                  }}
+                ></div>
+                <div
+                  className={Style.profile}
+                  style={{
+                    backgroundImage:
+                      "url('https://media.istockphoto.com/id/1491551245/photo/female-manager-showing-thumbs-up-sign-in-textile-industry.jpg?s=612x612&w=0&k=20&c=xAesg6rdQFCOgjroq2dVRTEDV6-2KMa8HCi9oIlsbcA=')",
+                  }}
+                ></div>
+                <div
+                  className={Style.profile}
+                  style={{
+                    backgroundImage:
+                      "url('https://ifmrlead.org/wp-content/uploads/2024/08/Mid-break-Cover-Newsletter.jpg')",
+                  }}
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Second Div */}
+          <div className={Style.mainPageFirstDiv}>
+            {/* Design Section */}
+            <div className={Style.designSectionSecondDiv}>
+              <img
+                src="\Assets\Brown Simple Grid Nature Photo Collage3.png"
+                alt=""
+              />
+            </div>
+
+            {/* Content Section */}
+            <div className={Style.contentSectionSecondDiv}>
+              <p className={Style.contentSectionPara1}>
+                <i class="fa-solid fa-heart"></i> About US
+              </p>
+              <h1 className={Style.contentSectionHeadingSecondDiv}>
+                Together, We Empower Each Other to Build a Better World.
+              </h1>
+              <p className={Style.contentSectionPara2}>
+                Our goal is to uplift and empower women, helping them achieve
+                their dreams and build a brighter future."
+              </p>
+
+              <p className={Style.contentSectionPara3}>
+                <i class="fa-solid fa-handshake-angle"></i> Start Helping Team
+              </p>
+              <div className={Style.joinUsNowBtn}>
+                <button>
+                  Donate Now{" "}
+                  <i class="fa-solid fa-circle-arrow-right fa-xl"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Third Div */}
+          <div className={Style.mainPageThirdDiv}>
+
+            <div className={Style.mainPageThirdDivHeadings}>
+              <p className={Style.contentSectionPara1}>
+                <i class="fa-solid fa-heart"></i> Features
+              </p>
+              <h1 className={Style.contentSectionHeadingThirdDiv}>
+                Our Unique Offerings
+              </h1>
+            </div>
+
+
+            <div className={Style.featuresSection}>
+  {/* Feature 1 */}
+  <div className={Style.featureDiv}>
+    <div className={Style.overlay}>
+      <h2>Alternative Financing Models</h2>
+      <p>
+      The platform allows individuals to support women’s goals with small contributions, offering perks like product samples. Women can also apply for interest-free returnable grants.
+      </p>
+      <Link className={Style.featureButton}>Explore <i class="fa-solid fa-arrow-up-right-from-square"></i></Link>
+    </div>
   </div>
 
-  {/* Design Section */}
-  <div className={Style.designSection}>
-    <div className={Style.profileContainer}>
-      <div className={Style.profile} style={{ backgroundImage: "url('/images/person1.jpg')" }}></div>
-      <div className={Style.profile} style={{ backgroundImage: "url('/images/person2.jpg')" }}></div>
-      <div className={Style.profile} style={{ backgroundImage: "url('/images/person3.jpg')" }}></div>
-      <div className={Style.profile} style={{ backgroundImage: "url('/images/person4.jpg')" }}></div>
-      <div className={Style.profile} style={{ backgroundImage: "url('/images/person5.jpg')" }}></div>
-      <div className={Style.profile} style={{ backgroundImage: "url('/images/person6.jpg')" }}></div>
+  {/* Feature 2 */}
+  <div className={Style.featureDiv}>
+    <div className={Style.overlay}>
+      <h2>AI-Powered Credit Evaluation</h2>
+      <p>
+        Instead of relying on collateral or credit history, the platform evaluates creditworthiness using AI. 
+        The AI analyzes business transactions, sales data, customer reviews, and even social credibility.
+      </p>
+      <Link className={Style.featureButton}>Explore <i class="fa-solid fa-arrow-up-right-from-square"></i></Link>
+    </div>
+  </div>
+
+  {/* Feature 3 */}
+  <div className={Style.featureDiv}>
+    <div className={Style.overlay}>
+      <h2>Financial Literacy Program</h2>
+      <p>
+        Through gamified modules, you can learns how to budget business expenses, 
+        build a strong credit profile, and adopt best practices for loan repayment and grow your business in every situation.
+      </p>
+      <Link className={Style.featureButton}>Explore <i class="fa-solid fa-arrow-up-right-from-square"></i></Link>
     </div>
   </div>
 </div>
-    </div>
-  </div>
-  </>
+
+
+
+          </div>
+
+
+          {/* Fourth Div */}
+
+          <div className={Style.mainPageFourthDiv}>
+
+
+          </div>
+
+          
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default MainPage;
