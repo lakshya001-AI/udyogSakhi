@@ -7,6 +7,7 @@ import MainPage from './Components/mainPage';
 import ProtectedRoute from './Components/protectedRoute';
 import DonationPage from './Components/donationPage';
 import ProfilePage from './Components/ProfilePage';
+import FinancingModel from './Components/financingModel';
 
 function App() {
   return <>
@@ -17,6 +18,7 @@ function App() {
     <Route path='/MainPage' element={<ProtectedRoute><MainPage/></ProtectedRoute>}/>
     <Route path='/donationPage' element={<ProtectedRoute><DonationPage/></ProtectedRoute>}/>
     <Route path='/ProfilePage' element={<ProtectedRoute><ProfilePage/></ProtectedRoute>}/>
+    <Route path='/financingModel' element={<ProtectedRoute><FinancingModel/></ProtectedRoute>}/>
   </Routes>
   </BrowserRouter>
 

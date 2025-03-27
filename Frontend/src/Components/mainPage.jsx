@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Style from "../App.module.css";
-import { Link , useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function MainPage() {
-
   const navigate = useNavigate();
 
-  function gotoDonations(){
+  function gotoDonations() {
     navigate("/donationPage");
   }
-
 
   return (
     <>
@@ -33,7 +31,7 @@ function MainPage() {
           </div>
 
           {/* First Div */}
-          <div className={Style.mainPageFirstDiv} >
+          <div className={Style.mainPageFirstDiv}>
             {/* Content Section */}
             <div className={Style.contentSection}>
               <p className={Style.contentSectionPara1}>
@@ -130,7 +128,8 @@ function MainPage() {
               </p>
 
               <p className={Style.contentSectionPara3}>
-                <i class="fa-solid fa-handshake-angle"></i> Join Us in Raising Funds to Make an Impact
+                <i class="fa-solid fa-handshake-angle"></i> Join Us in Raising
+                Funds to Make an Impact
               </p>
               <div className={Style.joinUsNowBtn}>
                 <button onClick={gotoDonations}>
@@ -143,7 +142,6 @@ function MainPage() {
 
           {/* Third Div */}
           <div className={Style.mainPageThirdDiv} id="features">
-
             <div className={Style.mainPageThirdDivHeadings}>
               <p className={Style.contentSectionPara1}>
                 <i class="fa-solid fa-heart"></i> Features
@@ -153,76 +151,89 @@ function MainPage() {
               </h1>
             </div>
 
-
             <div className={Style.featuresSection}>
-  {/* Feature 1 */}
-  <div className={Style.featureDiv}>
-    <div className={Style.overlay}>
-      <h2>Alternative Financing Models</h2>
-      <p>
-      The platform allows individuals to support women’s goals with small contributions, offering perks like product samples. Women can also apply for interest-free returnable grants.
-      </p>
-      <Link className={Style.featureButton}>Explore <i class="fa-solid fa-arrow-up-right-from-square"></i></Link>
-    </div>
-  </div>
+              {/* Feature 1 */}
+              <div className={Style.featureDiv}>
+                <div className={Style.overlay}>
+                  <h2>Alternative Financing Models</h2>
+                  <p>
+                    The platform allows individuals to support women’s goals
+                    with small contributions, offering perks like product
+                    samples. Women can also apply for interest-free returnable
+                    grants.
+                  </p>
+                  <Link className={Style.featureButton} to="/financingModel">
+                    Explore{" "}
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </Link>
+                </div>
+              </div>
 
-  {/* Feature 2 */}
-  <div className={Style.featureDiv}>
-    <div className={Style.overlay}>
-      <h2>AI-Powered Credit Evaluation</h2>
-      <p>
-        Instead of relying on collateral or credit history, the platform evaluates creditworthiness using AI. 
-        The AI analyzes business transactions, sales data, customer reviews, and even social credibility.
-      </p>
-      <Link className={Style.featureButton}>Explore <i class="fa-solid fa-arrow-up-right-from-square"></i></Link>
-    </div>
-  </div>
+              {/* Feature 2 */}
+              <div className={Style.featureDiv}>
+                <div className={Style.overlay}>
+                  <h2>AI-Powered Credit Evaluation</h2>
+                  <p>
+                    Instead of relying on collateral or credit history, the
+                    platform evaluates creditworthiness using AI. The AI
+                    analyzes business transactions, sales data, customer
+                    reviews, and even social credibility.
+                  </p>
+                  <Link className={Style.featureButton}>
+                    Explore{" "}
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </Link>
+                </div>
+              </div>
 
-  {/* Feature 3 */}
-  <div className={Style.featureDiv}>
-    <div className={Style.overlay}>
-      <h2>Financial Literacy Program</h2>
-      <p>
-        Through gamified modules, you can learns how to budget business expenses, 
-        build a strong credit profile, and adopt best practices for loan repayment and grow your business in every situation.
-      </p>
-      <Link className={Style.featureButton}>Explore <i class="fa-solid fa-arrow-up-right-from-square"></i></Link>
-    </div>
-  </div>
-</div>
-
-
-
+              {/* Feature 3 */}
+              <div className={Style.featureDiv}>
+                <div className={Style.overlay}>
+                  <h2>Financial Literacy Program</h2>
+                  <p>
+                    Through gamified modules, you can learns how to budget
+                    business expenses, build a strong credit profile, and adopt
+                    best practices for loan repayment and grow your business in
+                    every situation.
+                  </p>
+                  <Link className={Style.featureButton}>
+                    Explore{" "}
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
 
-
-         {/* Fourth Div */}
-         <div className={Style.mainPageFourthDiv} id="AboutUs">
+          {/* Fourth Div */}
+          <div className={Style.mainPageFourthDiv} id="AboutUs">
             {/* Content Section */}
             <div className={Style.contentSectionFourthDiv}>
               <p className={Style.contentSectionPara1}>
                 <i class="fa-solid fa-heart"></i> MarketPlace
               </p>
               <h1 className={Style.contentSectionHeadingFourthDiv}>
-              Building a Marketplace for Growth and Opportunity.
+                Building a Marketplace for Growth and Opportunity.
               </h1>
               <p className={Style.contentSectionPara2}>
-              Our mission is to empower women entrepreneurs by providing a thriving marketplace that fuels their success, drives profits, and fosters sustainable growth.
+                Our mission is to empower women entrepreneurs by providing a
+                thriving marketplace that fuels their success, drives profits,
+                and fosters sustainable growth.
               </p>
 
               <p className={Style.contentSectionPara3}>
-                <i class="fa-solid fa-handshake-angle"></i> Explore MarketPlace Now
+                <i class="fa-solid fa-handshake-angle"></i> Explore MarketPlace
+                Now
               </p>
               <div className={Style.joinUsNowBtnMarketPlace}>
                 <button>
-                Discover the Marketplace{" "}
+                  Discover the Marketplace{" "}
                   <i class="fa-solid fa-circle-arrow-right fa-xl"></i>
                 </button>
                 <button>
-                Showcase Your Product{" "}
+                  Showcase Your Product{" "}
                   <i class="fa-solid fa-circle-arrow-right fa-xl"></i>
                 </button>
-                
               </div>
             </div>
             {/* Design Section */}
@@ -233,8 +244,6 @@ function MainPage() {
               />
             </div>
           </div>
-
-          
         </div>
       </div>
     </>

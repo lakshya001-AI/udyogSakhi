@@ -15,7 +15,7 @@ function ProfilePage() {
 
 
   let getUser = JSON.parse(localStorage.getItem("User"));
-  console.log(getUser);
+  
   
 
 
@@ -42,14 +42,21 @@ function ProfilePage() {
             <div className={Style.profilePageMainInnerDiv}>
 
               <div className={Style.profilePageMainInnerDiv1}>
-                <div className={Style.profilePageMainInnerDiv11}></div>
+                <div className={Style.profilePageMainInnerDiv11}>
+                  <div className={Style.profilePageMainInnerDiv11HeadingDiv}>
+                    <h1>{getUser.fullName}</h1>
+                    <p>{`Credit Score: ${getUser.creditScore}`}</p>
+                      <p>{`EmailAddress: ${getUser.email}`}</p>
+                      <p>{`Phone Number: ${getUser.mobileNumber}`}</p>
+                  </div>
+                </div>
                 <div className={Style.profilePageMainInnerDiv12}>
                 <button onClick={logoutUser}>logout</button>
                 </div>
               </div>
 
               <div className={Style.profilePageMainInnerDiv2}>
-
+                {/* This section we are going to complete afterWard */}
               </div>
             </div>
           </div>

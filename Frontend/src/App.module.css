@@ -769,7 +769,29 @@ overflow-x: hidden;
   width: 20%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.profilePageMainInnerDiv12 button{
+  width: 70%;
+  padding: 12px;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+
+.profilePageMainInnerDiv12 button:hover{
+  background-color: rgb(246, 246, 246);
+}
+
+
+.profilePageMainInnerDiv11HeadingDiv{
+  color: white;
+  padding: 20px;
 }
 
