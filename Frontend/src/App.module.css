@@ -727,3 +727,49 @@ overflow-x: hidden;
 .donationForm button:hover {
   background-color: #800080c5;
 }
+
+
+.profilePageMainDiv{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 40px;
+}
+
+.profilePageMainInnerDiv{
+  width: 100%;
+  height: 100%;
+  border: solid 2px #800080;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.profilePageMainInnerDiv1{
+  width: 100%;
+  height: 20vh;
+  background-color: #800080;
+  border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.profilePageMainInnerDiv11{
+  width: 80%;
+  height: 100%;
+}
+
+
+.profilePageMainInnerDiv12{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

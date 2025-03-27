@@ -14,6 +14,11 @@ function ProfilePage() {
       };
 
 
+  let getUser = JSON.parse(localStorage.getItem("User"));
+  console.log(getUser);
+  
+
+
   return (
     <>
       <div className={Style.mainPage}>
@@ -32,7 +37,22 @@ function ProfilePage() {
             </div>
           </div>
 
-          <button onClick={logoutUser}>logout</button>
+          <div className={Style.profilePageMainDiv}>
+
+            <div className={Style.profilePageMainInnerDiv}>
+
+              <div className={Style.profilePageMainInnerDiv1}>
+                <div className={Style.profilePageMainInnerDiv11}></div>
+                <div className={Style.profilePageMainInnerDiv12}>
+                <button onClick={logoutUser}>logout</button>
+                </div>
+              </div>
+
+              <div className={Style.profilePageMainInnerDiv2}>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

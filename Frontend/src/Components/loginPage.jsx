@@ -45,7 +45,6 @@ function LoginPage() {
 
           // Retrieving the user object from localStorage
           let getUser = JSON.parse(localStorage.getItem("User"));
-          console.log(getUser);
 
           setTimeout(() => {
             navigate("/MainPage");
