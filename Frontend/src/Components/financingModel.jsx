@@ -23,8 +23,17 @@ function FinancingModel() {
             </div>
           </div>
 
-          
+          <div className={Style.financingModelMainDiv}>
+            <div className={Style.financingModelMainDivInnerDiv}>
+              <div className={Style.financingModelMainDivInnerDiv1}>
+                <div className={Style.financingModelMainDivInnerDiv1HeadingDiv}>
+                  <h1>Alternative Financing</h1>
+                </div>
+              </div>
 
+              <div className={Style.financingModelMainDivInnerDiv2}></div>
+            </div>
+          </div>
         </div>
       </div>
     </>
