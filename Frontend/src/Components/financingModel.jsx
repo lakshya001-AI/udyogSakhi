@@ -22,6 +22,9 @@ function FinancingModel() {
               <Link to="/ProfilePage">My Profile</Link>
             </div>
           </div>
+
+          
+
         </div>
       </div>
     </>

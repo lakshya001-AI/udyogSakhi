@@ -47,8 +47,8 @@ In the fourth feature we are going to create a mart where this women's those who
 -------------------------------------------------------------------------------
 
 1. Donate Now ✅
-2. Profile
-3. First feature
+2. Profile ✅
+3. First feature 
 4. Second feature
 5. third feature
 6. marketplace
