@@ -1271,4 +1271,47 @@ overflow-x: hidden;
   margin-bottom: 20px;
 }
 
+.creditScoreResultDiv{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.availableBankOptionCreditScore{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.availableBankOptionCreditScore h3{
+  margin-bottom: 20px;
+}
+
+.bankItem{
+  background-color: #e4e4e4;
+  margin: 5px 0px;
+  padding: 10px;
+}
+
+
+.saveButtonCS{
+  background-color: #5e005e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.saveBtnDivAndCloseBtnDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 
