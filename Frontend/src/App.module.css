@@ -959,8 +959,8 @@ overflow-x: hidden;
 .popupContent {
   background: #fff; /* White background */
   padding: 20px;
-  width: 90%;
-  max-width: 500px;
+  width: 100%;
+  width: 45vw;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -1032,6 +1032,243 @@ overflow-x: hidden;
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.option{
+  margin-bottom: 20px;
+}
+
+.option p{
+  margin: 10px;
+}
+
+.option button{
+  background-color: transparent;
+  border: solid 2px #5e005e;
+  color: #5e005e;
+  font-size: 15px;
+  margin: 10px;
+  font-weight: 600;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+.closeButton{
+  margin-top: 20px;
+}
+
+
+.bankItem{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.applyLink{
+  text-decoration: none !important;
+  color: #5e005e !important;
+}
+
+.bankList{
+  margin-top: 20px;
+}
+
+
+.creditScoreMainDiv {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f7fc;
+  padding: 20px;
+}
+
+.creditScoreMainDivInnerDiv {
+  width: 100%;
+  max-width: 1430px;
+  height: 90%;
+  padding: 40px;
+  position: relative;
+  background-image: url("https://source.unsplash.com/1600x900/?finance,business");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.creditScoreMainDivInnerDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(94, 0, 94, 0.5), rgba(94, 0, 94, 0.6)); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+.creditScoreMainDivInnerDiv h1,
+.creditScoreMainDivInnerDiv p,
+.creditScoreStepsDiv,
+.getCreditScoreButton {
+  position: relative;
+  z-index: 2; /* Content above the overlay */
+  text-align: center;
+  color: #ffffff; /* White text for contrast */
+}
+
+.creditScoreMainDivInnerDiv h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.creditScoreMainDivInnerDiv p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.creditScoreStepsDiv {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.creditScoreStepsDiv div {
+  width: calc(33.33% - 20px);
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent card */
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.creditScoreStepsDiv div:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.creditScoreStepsDiv h2 {
+  font-size: 1.5rem;
+  color: #5e005e;
+  margin-bottom: 10px;
+}
+
+.creditScoreStepsDiv p {
+  font-size: 1rem;
+  color: #444444;
+}
+
+.getCreditScoreButton {
+  background-color: transparent;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 15px 40px;
+  border: solid 2px white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.getCreditScoreButton:hover {
+  background-color: #e0d4e8;
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  color: #5e005e;
+}
+
+.getCreditScoreButton:active {
+  background-color: #e0d4e8;
+  transform: translateY(2px);
+}
+
+.overlayCreditScore {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popupCreditScore {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.formGroupCreditScore {
+  margin-bottom: 15px;
+}
+
+.formGroupCreditScore label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formGroupCreditScore input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submitButtonCS, .closeButtonCS {
+  background-color: #5e005e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.submitButtonCS:hover, .closeButtonCS:hover {
+  background-color: #7a007a;
+}
+
+.closeButtonCS {
+  background-color: #999;
+}
+
+.closeButtonCS:hover {
+  background-color: #777;
+}
+
+
+.CreditEvaluationHeadingDiv{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 

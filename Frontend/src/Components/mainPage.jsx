@@ -179,7 +179,7 @@ function MainPage() {
                     analyzes business transactions, sales data, customer
                     reviews, and even social credibility.
                   </p>
-                  <Link className={Style.featureButton}>
+                  <Link className={Style.featureButton} to="/creditEvaluation">
                     Explore{" "}
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </Link>

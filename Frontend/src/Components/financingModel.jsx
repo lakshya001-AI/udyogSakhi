@@ -303,12 +303,17 @@ function FinancingModel() {
       {showPopup && response && (
         <div className={Style.popupOverlay}>
           <div className={Style.popupContent}>
-            <h2>Loan Suggestions</h2>
             <div>
-              {/* Option 1: Crowdfunding */}
+              {/* Crowdfunding Option */}
               {response.option1 && (
                 <div className={Style.option}>
-                  <p>Crowdfunding: {response.option1}</p>
+                  <h2>Crowdfunding Opportunities</h2>
+                  <p>
+                    You can explore crowdfunding as an excellent option to raise
+                    funds for your business.
+                  </p>
+                  <p>Platform Available:{" "}
+                  <strong>{response.option1}</strong>.</p>
                   <button
                     className={Style.applyButton}
                     onClick={() => handleApply("Crowdfunding")}
@@ -318,17 +323,20 @@ function FinancingModel() {
                 </div>
               )}
 
-              {/* Option 2: Bank Loans */}
+              {/* Bank Loan Option */}
               {response.option2 !== "None" && (
                 <div className={Style.option}>
-                  <p>Loan Option: {response.option2}</p>
+                  <h2>Bank Loan Options</h2>
+                  <p>
+                    Explore the following banks that are offering
+                    loan options tailored for your needs:
+                  </p>
                   <div className={Style.bankList}>
-                    <p>Available Banks:</p>
                     <ul>
                       {response.banks && response.banks.length > 0 ? (
                         response.banks.map((bank, index) => (
                           <li key={index} className={Style.bankItem}>
-                            {bank.name}
+                            <strong>{bank.name}</strong>
                             <a
                               href={bank.link}
                               target="_blank"
@@ -358,7 +366,7 @@ function FinancingModel() {
                             },
                           ].map((bank, index) => (
                             <li key={index} className={Style.bankItem}>
-                              {bank.name}
+                              <strong>{bank.name}</strong>
                               <a
                                 href={bank.link}
                                 target="_blank"
@@ -379,7 +387,13 @@ function FinancingModel() {
               {/* Approval Percentage */}
               {response.approval_percentage && (
                 <div className={Style.approval}>
-                  <p>Approval Percentage: {response.approval_percentage}%</p>
+                  <h2>Loan Approval Insights</h2>
+                  <p>
+                    Based on your profile and financial history, the estimated
+                    loan approval percentage is{" "}
+                    <strong>{response.approval_percentage}%</strong>. This
+                    indicates your likelihood of successfully securing the loan.
+                  </p>
                 </div>
               )}
             </div>
