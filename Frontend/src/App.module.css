@@ -820,7 +820,7 @@ overflow-x: hidden;
   border: solid 2px #5e005e;
   margin-right: 30px;
   position: relative; /* To position the overlay correctly */
-  background: linear-gradient(rgba(94, 0, 94, 0.6), rgba(94, 0, 94, 0.6)), 
+  background: linear-gradient(rgba(94, 0, 94, 0.5), rgba(94, 0, 94, 0.6)), 
               url('https://media.gettyimages.com/id/2148961177/photo/financial-advisor-stock-photo.jpg?s=612x612&w=0&k=20&c=ql8a9pfR8ouuO2c89TZZey5gPR_yg5HGs10jJvV4jBw=');
   background-size: cover;
   background-position: center;
@@ -830,6 +830,12 @@ overflow-x: hidden;
 }
 
 .financingModelMainDivInnerDiv1HeadingDiv h1 {
+  z-index: 2; /* Ensure it's above the overlay */
+  margin: 20px;
+  font-size: 4.3rem;
+}
+
+.financingModelMainDivInnerDiv1HeadingDiv p {
   z-index: 2; /* Ensure it's above the overlay */
   margin: 20px;
 }
@@ -860,7 +866,172 @@ overflow-x: hidden;
   background-color: #f3f3f3;
 }
 
+
+.financingModelMainDivInnerDiv2 {
+  width: 40%;
+  height: 100%;
+  background-color: #f3f3f3;
+  border-radius: 12px; /* Adding rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 20px; /* Inner padding for better content spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align content */
+  justify-content: center; /* Vertically center-align content */
+  overflow-y: auto; /* Handle overflow if form content exceeds height */
+  font-family: 'Arial', sans-serif; /* Clean font for consistency */
+}
+
+.financingModelMainDivInnerDiv2 h1 {
+  font-size: 1.8rem; /* Slightly larger heading */
+  color: #800080; /* Complementary purple color for heading */
+  margin-bottom: 20px; /* Space below heading */
+  text-align: center; /* Centered heading */
+}
+
+.fundingFormHeading{
+  margin-top: 40vmax;
+  margin-bottom: 20px;
+  color: #800080;
+}
+
+.financingModelMainDivInnerDiv2 form {
+  width: 100%; /* Full width form */
+}
+
+.financingModelMainDivInnerDiv2 button {
+  width: 100%;
+  background-color: #800080; /* Button color */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px; /* Space above button */
+  transition: background-color 0.3s ease;
+}
+
+.financingModelMainDivInnerDiv2 button:hover {
+  background-color: #5e005e; /* Darker purple on hover */
+}
+
+.financingModelMainDivInnerDiv2 input,
+.financingModelMainDivInnerDiv2 select,
+.financingModelMainDivInnerDiv2 textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: none;
+}
+
+
 .financingModelMainDivInnerDiv1HeadingDiv{
   width: 100%;
 }
+
+
+.stepsForAlternateFinancing p{
+  font-size: 1.2rem;
+  border: solid 1px white;
+  padding: 10px;
+}
+
+
+/* Overlay */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* High z-index to overlay everything */
+}
+
+/* Popup Content */
+.popupContent {
+  background: #fff; /* White background */
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Header */
+.popupContent h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Loan Options List */
+.popupContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.popupContent ul li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f9f9f9; /* Light gray */
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.popupContent ul li p {
+  margin: 0 0 5px;
+  color: #444;
+  font-weight: bold;
+}
+
+.popupContent ul li a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.popupContent ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Close Button */
+.closeButton {
+  padding: 10px 20px;
+  background: #e74c3c; /* Red */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.closeButton:hover {
+  background: #c0392b; /* Darker red */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
