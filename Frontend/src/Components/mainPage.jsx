@@ -7,9 +7,26 @@ import "react-toastify/dist/ReactToastify.css";
 
 function MainPage() {
   const navigate = useNavigate();
+  const [showPopup, setShowPopup] = useState(false);
+
+  function togglePopup() {
+    setShowPopup(!showPopup);
+  }
 
   function gotoDonations() {
     navigate("/donationPage");
+  }
+
+  function gotoMarketPlace(){
+    navigate("/marketPlace");
+  }
+
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    // Handle form submission logic here
+    console.log("Product submitted!");
+    setShowPopup(false);
   }
 
   return (
@@ -23,7 +40,7 @@ function MainPage() {
               <Link to="/MainPage">Home</Link>
               <a href="#features">Features</a>
               <a href="#AboutUs">About Us</a>
-              <Link>MarketPlace</Link>
+              <Link to="/marketPlace">MarketPlace</Link>
             </div>
             <div className={Style.navBarBtn}>
               <Link to="/ProfilePage">My Profile</Link>
@@ -226,11 +243,11 @@ function MainPage() {
                 Now
               </p>
               <div className={Style.joinUsNowBtnMarketPlace}>
-                <button>
+                <button onClick={gotoMarketPlace}>
                   Discover the Marketplace{" "}
                   <i class="fa-solid fa-circle-arrow-right fa-xl"></i>
                 </button>
-                <button>
+                <button onClick={togglePopup}>
                   Showcase Your Product{" "}
                   <i class="fa-solid fa-circle-arrow-right fa-xl"></i>
                 </button>
@@ -244,6 +261,39 @@ function MainPage() {
               />
             </div>
           </div>
+
+            {/* Overlay Popup */}
+            {showPopup && (
+            <div className={Style.overlayMarketPlaceProduct}>
+              <div className={Style.popupMarketPlaceProduct}>
+                <h2>Showcase Your Product</h2>
+                <form onSubmit={handleFormSubmit}>
+                  <label>
+                    Product Name:
+                    <input type="text" name="name" required />
+                  </label>
+                  <label>
+                    Product Price:
+                    <input type="number" name="price" required />
+                  </label>
+                  <label>
+                    Product Description:
+                    <textarea name="description" required></textarea>
+                  </label>
+                  <label>
+                    Product Image:
+                    <input type="file" name="image" accept="image/*" required />
+                  </label>
+                  <div className={Style.popupButtons}>
+                    <button type="submit">Submit</button>
+                    <button type="button" onClick={togglePopup}>
+                      Cancel
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>

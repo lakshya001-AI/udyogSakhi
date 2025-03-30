@@ -55,7 +55,7 @@ function FinancingModel() {
               <Link to="/MainPage">Home</Link>
               <a href="#features">Features</a>
               <a href="#AboutUs">About Us</a>
-              <Link>MarketPlace</Link>
+              <Link to="/marketPlace">MarketPlace</Link>
             </div>
             <div className={Style.navBarBtn}>
               <Link to="/ProfilePage">My Profile</Link>

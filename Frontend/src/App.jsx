@@ -10,6 +10,7 @@ import ProfilePage from './Components/ProfilePage';
 import FinancingModel from './Components/financingModel';
 import CreditEvaluation from './Components/creditEvaluation';
 import FinancialLiteracy from './Components/financialLitracy';
+import MarketPlace from './Components/marketPlace';
 
 function App() {
   return <>
@@ -23,6 +24,7 @@ function App() {
     <Route path='/financingModel' element={<ProtectedRoute><FinancingModel/></ProtectedRoute>}/>
     <Route path='/creditEvaluation' element={<ProtectedRoute><CreditEvaluation/></ProtectedRoute>}/>
     <Route path='/financialLiteracy' element={<ProtectedRoute><FinancialLiteracy/></ProtectedRoute>}/>
+    <Route path='/marketPlace' element={<ProtectedRoute><MarketPlace/></ProtectedRoute>}/>
   </Routes>
   </BrowserRouter>
 
