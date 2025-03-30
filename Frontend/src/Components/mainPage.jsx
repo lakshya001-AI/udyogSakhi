@@ -196,7 +196,7 @@ function MainPage() {
                     best practices for loan repayment and grow your business in
                     every situation.
                   </p>
-                  <Link className={Style.featureButton}>
+                  <Link className={Style.featureButton} to="/financialLiteracy">
                     Explore{" "}
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </Link>

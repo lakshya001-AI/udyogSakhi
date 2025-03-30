@@ -9,6 +9,7 @@ import DonationPage from './Components/donationPage';
 import ProfilePage from './Components/ProfilePage';
 import FinancingModel from './Components/financingModel';
 import CreditEvaluation from './Components/creditEvaluation';
+import FinancialLiteracy from './Components/financialLitracy';
 
 function App() {
   return <>
@@ -21,6 +22,7 @@ function App() {
     <Route path='/ProfilePage' element={<ProtectedRoute><ProfilePage/></ProtectedRoute>}/>
     <Route path='/financingModel' element={<ProtectedRoute><FinancingModel/></ProtectedRoute>}/>
     <Route path='/creditEvaluation' element={<ProtectedRoute><CreditEvaluation/></ProtectedRoute>}/>
+    <Route path='/financialLiteracy' element={<ProtectedRoute><FinancialLiteracy/></ProtectedRoute>}/>
   </Routes>
   </BrowserRouter>
 
