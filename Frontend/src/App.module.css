@@ -1351,10 +1351,25 @@ overflow-x: hidden;
   padding: 20px;
 }
 
+.optionsForCampaign{
+  width: 27vw;
+  height: 30vh;
+  padding: 20px;
+  background-color: #ffffff;
+  border: solid 1px #ddd;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.optionsForCampaign:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .optionsForLiteracy {
-  width: 33vw;
-  max-width: 300px;
-  height: 65vh;
+  width: 27vw;
+  height: 54vh;
   background-color: #ffffff;
   border: solid 1px #ddd;
   border-radius: 20px;
@@ -1376,17 +1391,35 @@ overflow-x: hidden;
 }
 
 .optionsForLiteracy h3 {
-  margin: 15px;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
   color: #222;
   font-weight: 600;
 }
 
-.optionsForLiteracy p {
-  margin: 15px;
+.optionsForCampaign  h3 {
+  font-size: 1.3rem;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: #222;
+  font-weight: 600;
+}
+
+.optionsForCampaign  p {
   font-size: 0.95rem;
   color: #555;
   line-height: 1.5;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.optionsForLiteracy p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .startLearningBtn {
@@ -1399,7 +1432,7 @@ overflow-x: hidden;
 
 .startLearningBtn button {
   width: 90%;
-  background-color: #6a0dad;
+  background-color: #800080;
   color: white;
   padding: 12px 25px;
   border: none;
@@ -1412,7 +1445,7 @@ overflow-x: hidden;
 }
 
 .startLearningBtn button:hover {
-  background-color: #5700a5;
+  background-color: #b000b0;
   transform: scale(1.05);
 }
 
@@ -1426,7 +1459,7 @@ overflow-x: hidden;
 
 .optionsSectionDivInnerDiv {
   background-color: #ffffff;
-  width: 40vw;
+  width: 50vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1452,4 +1485,64 @@ overflow-x: hidden;
 .optionsSectionDivInnerDiv button:hover {
   background-color: #aa01aa;
   transform: scale(1.05);
+}
+
+
+/* CSS Styling */
+.inputFieldsDiv{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 20px 30px;
+}
+
+.inputField{
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+.textAreaDiv{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+}
+
+.textArea{
+  width: 100%;
+  height: 30vh;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 18px;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.submitBtnDiv{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitBtnDiv button{
+  width: 15vw;
+  background-color: #800080;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtnDiv button:hover{
+  background-color: #ab00ab;
 }
