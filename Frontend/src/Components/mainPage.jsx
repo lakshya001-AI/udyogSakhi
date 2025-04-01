@@ -191,10 +191,7 @@ function MainPage() {
                 <div className={Style.overlay}>
                   <h2>AI-Powered Credit Evaluation</h2>
                   <p>
-                    Instead of relying on collateral or credit history, the
-                    platform evaluates creditworthiness using AI. The AI
-                    analyzes business transactions, sales data, customer
-                    reviews, and even social credibility.
+                  The motive of this feature is to help women entrepreneurs understand their creditworthiness and provide them with loan options based on their business performance.
                   </p>
                   <Link className={Style.featureButton} to="/creditEvaluation">
                     Explore{" "}
@@ -208,10 +205,7 @@ function MainPage() {
                 <div className={Style.overlay}>
                   <h2>Financial Literacy Program</h2>
                   <p>
-                    Through gamified modules, you can learns how to budget
-                    business expenses, build a strong credit profile, and adopt
-                    best practices for loan repayment and grow your business in
-                    every situation.
+                  The goal of this feature is to educate women entrepreneurs about finance, enabling them to make informed financial decisions, improve their creditworthiness, and access better funds.
                   </p>
                   <Link className={Style.featureButton} to="/financialLiteracy">
                     Explore{" "}
