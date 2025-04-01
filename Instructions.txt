@@ -1,0 +1,101 @@
+# Project Setup Instructions
+
+## Prerequisites
+Ensure you have the following installed:
+- Node.js (latest LTS version)
+- MongoDB (running locally or on a cloud service like MongoDB Atlas)
+- Python 3.x
+- pip (Python package manager)
+
+## Installation and Running the Project
+
+### 1. Backend Setup
+1. Open a terminal and navigate to the `Backend` folder:
+   ```sh
+   cd Backend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the backend server:
+   ```sh
+   npx nodemon
+   ```
+
+### 2. Frontend Setup
+1. Open a new terminal and navigate to the `Frontend` folder:
+   ```sh
+   cd Frontend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the frontend application:
+   ```sh
+   npm run dev
+   ```
+
+### 3. Credit Score Model API Setup
+1. Open a new terminal and navigate to the `CreditScoreModel` folder:
+   ```sh
+   cd CreditScoreModel
+   ```
+2. Create a virtual environment:
+   ```sh
+   python -m venv venv
+   ```
+3. Activate the virtual environment:
+   - On Windows:
+     ```sh
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```sh
+     source venv/bin/activate
+     ```
+4. Install dependencies:
+   ```sh
+   pip install flask cors
+   ```
+5. Run the credit score model API:
+   ```sh
+   python credit_score_model.py
+   ```
+
+### 4. Funding Model API Setup
+1. Open another terminal and navigate to the `fundingModel` folder:
+   ```sh
+   cd fundingModel
+   ```
+2. Create a virtual environment:
+   ```sh
+   python -m venv venv
+   ```
+3. Activate the virtual environment:
+   - On Windows:
+     ```sh
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```sh
+     source venv/bin/activate
+     ```
+4. Install dependencies:
+   ```sh
+   pip install flask cors
+   ```
+5. Run the funding model API:
+   ```sh
+   python fundingModel.py
+   ```
+
+## Notes
+- Ensure MongoDB is running before starting the backend.
+- If any Python dependencies are missing, install them manually using `pip install flask cors`.
+- The backend, frontend, and both Python services should be running simultaneously for full functionality.
+- Always activate the virtual environment before running Python scripts.
+
+Enjoy using the project!
+
